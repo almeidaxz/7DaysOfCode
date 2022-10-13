@@ -19,6 +19,10 @@
     gap: 13px;
 }
 
+.highlight-font-family {
+    font-family: var(--highlight-font-family);
+}
+
 .font-size-16 {
     font-size: var(--font-size-16);
 }
