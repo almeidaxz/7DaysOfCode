@@ -7,7 +7,7 @@ const menuOptions = ['Como fazer', 'Ofertas', 'Depoimenmtos', 'Videos', 'Meu Car
 export default function NavBar() {
     console.log(menuOptions.at(-1));
     return (
-        <header>
+        <header className='nav-bar-row'>
             <nav className='row align-center space-btw font-size-16'>
                 <img src={Logo} alt="page logo" />
                 <div className='row gap-13'>
