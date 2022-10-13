@@ -1,0 +1,36 @@
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-btw {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap-13 {
+    gap: 13px;
+}
+
+.font-size-16 {
+    font-size: var(--font-size-16);
+}
+
+.font-size-22 {
+    font-size: var(--font-size-22);
+}
+
+.font-size-32 {
+    font-size: var(--font-size-32);
+}
+
+.font-size-82 {
+    font-size: var(--font-size-82);
+}
