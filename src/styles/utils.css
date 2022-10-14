@@ -38,3 +38,7 @@
 .font-size-82 {
     font-size: var(--font-size-82);
 }
+
+.border-none{
+    border: none;
+}

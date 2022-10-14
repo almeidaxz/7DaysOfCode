@@ -4,6 +4,7 @@ html {
 
 :root {
     --theme-color: #FFCB47;
+    --theme-color-hover: #ffd56b;
     --text-color-900: #202020;
     --text-color-400: rgba(32, 32, 32, 0.5);
     --text-color-white: #FFF;
@@ -22,7 +23,6 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    width: 1200px;
     margin: 0 auto;
 }
 

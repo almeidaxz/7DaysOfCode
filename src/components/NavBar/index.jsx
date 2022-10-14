@@ -1,29 +1,28 @@
 import Logo from '../../assets/logo.svg';
+import { MenuItemBox, MenuItem, CustomNavBar } from './styled';
 import '../../styles/utils.css';
-import './styles.css';
 
-const menuOptions = ['Como fazer', 'Ofertas', 'Depoimenmtos', 'Videos', 'Meu Carrinho'];
+const menuOptions = ['Como fazer', 'Ofertas', 'Depoimentos', 'Videos', 'Meu Carrinho'];
 
 export default function NavBar() {
-    console.log(menuOptions.at(-1));
     return (
-        <header className='nav-bar-row'>
-            <nav className='row align-center space-btw font-size-16'>
+        <header>
+            <CustomNavBar className='row align-center space-btw font-size-16'>
                 <img src={Logo} alt="page logo" />
                 <div className='row gap-13'>
                     {menuOptions.map((item) => {
                         return (
                             <div key={item} className='row gap-13'>
-                                <div>
-                                    <a className='menu-item' href='#'>{item}</a>
-                                </div>
+                                <MenuItemBox className='menu-item-container'>
+                                    <MenuItem className='menu-item' href='#'>{item}</MenuItem>
+                                </MenuItemBox>
                                 {item === menuOptions.at(-1) ? '' : <div>/</div>}
                             </div>
                         )
                     }
                     )}
                 </div>
-            </nav>
+            </CustomNavBar>
         </header>
     )
 }

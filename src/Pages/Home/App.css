@@ -1,0 +1,10 @@
+body {
+    background-image: url('../../assets/theme-blob.svg'), url('../../assets/bg.jpg');
+    background-repeat: no-repeat, repeat-x;
+    background-position: right top;
+}
+
+.App{
+    max-width: 1200px;
+    margin: 0 auto;
+}

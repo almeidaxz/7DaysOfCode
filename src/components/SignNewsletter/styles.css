@@ -1,59 +1,50 @@
-.newsletter-container {
-    color: var(--text-color-400);
-    height: 462px;
-    width: 585px;
-    margin-top: 15rem;
+@media (min-width: 920px) {
+    .newsletter-container::after {
+        content: "";
+        display: block;
+        height: 787px;
+        width: 975px;
+        background-image: url('../../assets//hero-image.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 20px;
+        left: calc(40% + 30px);
+        z-index: -1;
+
+    }
 }
 
-.highlight{
-    color: var(--text-color-900);
-    line-height: 9.4rem;
+@media (min-width: 1440px) {
+    .newsletter-container::after {
+        content: "";
+        display: block;
+        height: 787px;
+        width: 975px;
+        background-image: url('../../assets//hero-image.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 20px;
+        left: 40%;
+        z-index: -1;
+
+    }
 }
 
-.p-box {
-    width: 481px;
-    text-align: justify;
-    margin-top: 2.4rem;
-    line-height: 2.6rem;
-}
+@media (min-width: 1920px) {
+    .newsletter-container::after {
+        content: "";
+        display: block;
+        height: 787px;
+        width: 975px;
+        background-image: url('../../assets//hero-image.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 20px;
+        left: 45%;
+        z-index: -1;
 
-.custom-input {
-    height: 75px;
-    width: inherit;
-    position: relative;
-    margin-top: 3.7rem;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-}
-
-.mail-icon {
-    margin-left: 1.8rem;
-    height: 10px;
-    width: 22px;
-    position: absolute;
-}
-
-.newsletter-btn,
-.newsletter-input {
-    border: none;
-}
-.newsletter-btn,
-.custom-input input::placeholder {
-    font-size: var(--font-size-16);
-}
-
-.newsletter-input {
-    height: inherit;
-    padding: 0 5.5rem;
-    width: calc(585px - 192px);
-}
-
-.custom-input input::placeholder{
-    color: var(--text-color-400);
-}
-
-.newsletter-btn {
-    height: inherit;
-    width: 194px;
-    color: var(--text-color-white);
-    background-color: var(--theme-color);
+    }
 }

@@ -5,7 +5,7 @@ import Newsletter from '../../components/SignNewsletter';
 function App() {
 
   return (
-    <div className="App">
+    <div className='App'>
       <NavBar />
       <Newsletter />
     </div>
