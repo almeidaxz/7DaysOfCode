@@ -58,6 +58,7 @@
         position: absolute;
         top: 20px;
         left: 40%;
+        color: rgb(227, 97, 97);
         z-index: -1;
     }
 }

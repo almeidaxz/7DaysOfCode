@@ -19,7 +19,7 @@ export const ParagraphContainer = styled.p`
     line-height: 2.6rem;
 `;
 
-export const CustomInputContainer = styled.div`
+export const CustomInputContainer = styled.form`
     height: 75px;
     width: inherit;
     position: relative;
@@ -59,3 +59,12 @@ export const CustomBtn = styled.button`
         background-color: var(--theme-color-hover);
     }
 `;
+
+export const CustonErrorMessage = styled.span`
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgb(227, 97, 97);
+    position: absolute;
+    bottom: -2.5rem;
+    left: 1rem;
+`
