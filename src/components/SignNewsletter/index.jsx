@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import Mail from '../../assets/mail.svg';
 import { newsletterSchema } from '../../schemas/newsletterSchema';
-import sendMail from '../../utils/sendMail';
+import sendMail from '../../services/sendMail';
 import { CustomBtn, CustomInput, CustomInputContainer, CustonErrorMessage, HighlightText, MailIcon, NewsletterContainer, ParagraphContainer } from './styled';
 import './styles.css';
 

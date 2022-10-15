@@ -2,6 +2,8 @@ body {
     background-image: url('../../assets/theme-blob.svg'), url('../../assets/bg.jpg');
     background-repeat: no-repeat, repeat-x;
     background-position: right top;
+    background-size: auto, cover;
+    padding-bottom: 12rem;
 }
 
 .App{

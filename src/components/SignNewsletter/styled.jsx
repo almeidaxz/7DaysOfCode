@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NewsletterContainer = styled.div`
+export const NewsletterContainer = styled.section`
     color: var(--text-color-400);
     height: 462px;
     width: 585px;
