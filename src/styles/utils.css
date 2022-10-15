@@ -11,12 +11,24 @@
     justify-content: space-between;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .align-center {
     align-items: center;
 }
 
 .gap-13 {
     gap: 13px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-32 {
+    gap: 32px;
 }
 
 .highlight-font-family {
@@ -35,10 +47,14 @@
     font-size: var(--font-size-32);
 }
 
+.font-size-42 {
+    font-size: var(--font-size-42);
+}
+
 .font-size-82 {
     font-size: var(--font-size-82);
 }
 
-.border-none{
+.border-none {
     border: none;
 }

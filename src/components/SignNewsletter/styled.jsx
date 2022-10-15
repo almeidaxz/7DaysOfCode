@@ -4,7 +4,7 @@ export const NewsletterContainer = styled.div`
     color: var(--text-color-400);
     height: 462px;
     width: 585px;
-    margin-top: 15rem;
+    margin-bottom: 12rem;
 `;
 
 export const HighlightText = styled.strong`

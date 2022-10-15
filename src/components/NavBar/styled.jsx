@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CustomNavBar = styled.nav`
     margin-top: 1rem;
+    margin-bottom: 14rem;
 `;
 
 export const MenuItemBox = styled.div`
