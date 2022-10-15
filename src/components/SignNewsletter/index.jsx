@@ -1,11 +1,14 @@
-import Mail from '../../assets/mail.svg';
-import { NewsletterContainer, HighlightText, ParagraphContainer, CustomInputContainer, MailIcon, CustomInput, CustomBtn, CustonErrorMessage } from './styled';
-import { useForm } from 'react-hook-form';
-import { newsletterSchema } from '../../schemas/newsletterSchema';
+import emailjs from '@emailjs/browser';
 import { joiResolver } from '@hookform/resolvers/joi';
+import { useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import Mail from '../../assets/mail.svg';
+import { newsletterSchema } from '../../schemas/newsletterSchema';
+import { CustomBtn, CustomInput, CustomInputContainer, CustonErrorMessage, HighlightText, MailIcon, NewsletterContainer, ParagraphContainer } from './styled';
 import './styles.css';
 
 export default function Newsletter() {
+    const formRef = useRef();
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: joiResolver(newsletterSchema)
     });
@@ -19,7 +22,18 @@ export default function Newsletter() {
                 <ParagraphContainer className="font-size-16">
                     Encontre aqui uma vasta seleção de plantas para decorar a sua casa e torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu e-mail e assine nossa newsletter para saber das novidades da marca.
                 </ParagraphContainer>
-                <CustomInputContainer className='row align-center' onSubmit={handleSubmit((data) => { alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail ${data.email}`) })}>
+                <CustomInputContainer
+                    className='row align-center'
+                    ref={formRef}
+                    onSubmit={handleSubmit(async (data) => {
+                        alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail ${data.email}`);
+                        try {
+                            await emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, formRef.current, import.meta.env.VITE_PUBLIC_KEY);
+                        } catch (error) {
+                            console.log(error)
+                        }
+                    })}
+                >
                     <MailIcon src={Mail} className='mail-icon' alt="mail icon" />
                     <CustomInput
                         {...register("email", { required: true })}
