@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FadedText, HighlightText, OfferSectionContainer, ItemContentWrapper, ItemImageWrapper, ItemTitle, ItemTextContentWrapper, BuyBtn } from './styled';
 import api from '../../services/apiConnection';
 import Seta from '../../assets/seta.svg';
+import formatPrice from '../../utils/utils';
 
 export default function OfferSection() {
     const [items, setItems] = useState([]);
@@ -25,7 +26,7 @@ export default function OfferSection() {
                         <ItemContentWrapper className='row' key={item.ordem}>
                             <ItemTextContentWrapper className='column space-btw'>
                                 <ItemTitle className='font-size-32 highlight-font-family'>{item.name}</ItemTitle>
-                                <FadedText className='font-size-16'>R$ {item.preco}</FadedText>
+                                <FadedText className='font-size-16'>{formatPrice(item.preco)}</FadedText>
                                 <BuyBtn
                                     className='row space-btw align-center font-size-16'
                                 >
