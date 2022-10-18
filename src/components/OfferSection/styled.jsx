@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const OfferSectionContainer = styled.section`
     color: var(--text-color-900);
     margin-top: 4.4rem;
+    position: relative;
 `;
 
 export const FadedText = styled.span`
@@ -12,49 +13,36 @@ export const FadedText = styled.span`
 export const HighlightText = styled.strong`
     color: var(--text-color-900);
     line-height: 9.4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 `;
 
-export const ItemContentWrapper = styled.div`
-    width: 379px;
-    height: 200px;
-    text-align: center;
-    postition: relative;
+export const ButtonsWrapper = styled.div`
+    position: relative;
+`
+
+export const FilterBtn = styled.div`
+    padding: 5px 15px;
+    position: absolute;
+    top: 10.5rem;
+    right: 0;
+    border-radius: 15px;
     background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-`;
-
-export const ItemImageWrapper = styled.div`
-    height: inherit;
-    width: inherit;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-`;
-
-export const ItemTextContentWrapper = styled.div`
-    width: 30%;
-    z-index: 1;
-    margin-left: 50%;
-    padding: 2.2rem 0 3.8rem 0;
-    text-align: start;
-`;
-
-export const ItemTitle = styled.h1`
-    color: var(--text-color-900);
-    line-heigth: 3.6rem;
-    margin-bottom: 0.8rem;
-`;
-
-export const BuyBtn = styled.button`
-    font-family: 'Montserrat', sans-serif;
-    color: var(--theme-color);
-    width: 110px;
-    margin-top: 2.4rem;
-    background-color: transparent;
-    border: none;
     cursor: pointer;
     &:hover {
-        opacity: 0.5;
+        background-color: rgb(217, 217, 217);
+    }
+`
+export const OrderBtn = styled.div`
+    padding: 5px 15px;
+    position: absolute;
+    top: 10.5rem;
+    right: 7rem;
+    border-radius: 15px;
+    background-color: #FFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(217, 217, 217);
     }
 `
