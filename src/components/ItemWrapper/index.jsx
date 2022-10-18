@@ -2,7 +2,7 @@ import Seta from '../../assets/seta.svg';
 import formatPrice from '../../utils/utils';
 import { BuyBtn, FadedText, ItemContentWrapper, ItemImageWrapper, ItemTextContentWrapper, ItemTitle } from './styled';
 
-export default function ItemWrapper({name, preco, img}) {
+export default function ItemWrapper({ name, preco, img }) {
     return (
         <ItemContentWrapper className='row'>
             <ItemTextContentWrapper className='column space-btw'>

@@ -6,11 +6,11 @@ export const PopUp = styled.div`
     padding: 1rem;
     border-radius: 5px;
     background-color: #FFF;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 13.3rem;
     right: 0.5rem;
-    z-index: 1;
+    z-index: 2;
 `;
 
 export const CustomInput = styled.input`

@@ -18,11 +18,15 @@ export default function OfferSection() {
     }
 
     const handlePopUps = (e) => {
-        if (e.target.innerHTML === 'Filtrar') {
-            openFilterPopUp();
-        }
-        if (e.target.innerHTML === 'Ordenar') {
-            openOrderPopUp();
+        switch (e.target.innerHTML) {
+            case 'Filtrar':
+                openFilterPopUp();
+                return;
+            case 'Ordenar':
+                openOrderPopUp();
+                return;
+            default:
+                return null;
         }
     }
 
@@ -52,7 +56,7 @@ export default function OfferSection() {
                 >
                     Filtrar
                 </FilterBtn>
-                {popUps.filterOpened && <FilterPopUp />}
+                {popUps.filterOpened && <FilterPopUp items={items} setItems={setItems} />}
                 <OrderBtn
                     onClick={handlePopUps}
                     className='font-size-12'
@@ -60,14 +64,14 @@ export default function OfferSection() {
                 >
                     Ordenar
                 </OrderBtn>
-                {popUps.orderOpened && <OrderPopUp />}
+                {popUps.orderOpened && <OrderPopUp items={items} setItems={setItems} />}
             </div>
             <div className='row wrap gap-30'>
                 {items.map((item) => {
                     if (item.ordem) {
-                        return (
-                            <ItemWrapper key={item.ordem} name={item.name} preco={item.preco} img={item.img} />
-                        )
+                    return (
+                        <ItemWrapper key={item.ordem} name={item.name} preco={item.preco} img={item.img} />
+                    )
                     }
                 })}
             </div>

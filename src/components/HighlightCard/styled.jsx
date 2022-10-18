@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CardContainer = styled.section`
     color: var(--text-color-400);
     margin: 0 auto;
-    width: 995px;
+    max-width: 995px;
     height: 440px;
     display: flex;
     background-color: #FFF;
@@ -11,7 +11,7 @@ export const CardContainer = styled.section`
 `;
 
 export const PlantImage = styled.img`
-    width: 600px;
+    max-width: 600px;
 `;
 
 export const CardTextContainer = styled.div`

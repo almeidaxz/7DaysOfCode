@@ -2,22 +2,44 @@ import { PopUp, OrderOption } from "./styled";
 import { ArrowUp, ArrowDown } from 'phosphor-react';
 import { useEffect, useState } from "react";
 
-export default function OrderPopUp() {
+export default function OrderPopUp({ items, setItems }) {
     const [ordination, setOrdination] = useState({});
+    const localItems = [...items];
 
     const handleChangeOrdination = (e) => {
         const selectedOption = e.target.innerHTML.split('<')[0];
         switch (selectedOption) {
             case 'Preço':
                 ordination.price === 'ASC'
-                    ? setOrdination({ ...ordination, price: 'DSC' })
-                    : setOrdination({ ...ordination, price: 'ASC' })
+                    ? handleOrdination('DSC', 'price', 'preco')
+                    : handleOrdination('ASC', 'price', 'preco')
                 return;
             case 'Nome':
                 ordination.name === 'ASC'
-                    ? setOrdination({ ...ordination, name: 'DSC' })
-                    : setOrdination({ ...ordination, name: 'ASC' })
+                    ? handleOrdination('DSC', 'name', 'nome')
+                    : handleOrdination('ASC', 'name', 'nome')
                 return;
+            default:
+                return null;
+        }
+    }
+
+    const handleOrdination = (sortOrder, sortOption, itemKey) => {
+        const sortedItems = handleSort(sortOrder, itemKey);
+        setOrdination({ ...ordination, [sortOption]: sortOrder });
+        setItems(sortedItems);
+    }
+
+    const handleSort = (sortOrder, sortOption) => {
+        switch (sortOrder) {
+            case 'ASC':
+                return localItems.sort((a, b) => {
+                    return a[sortOption] > b[sortOption] ? 1 : -1;
+                });
+            case 'DSC':
+                return localItems.sort((a, b) => {
+                    return a[sortOption] < b[sortOption] ? 1 : -1;
+                });
             default:
                 return null;
         }
@@ -29,7 +51,6 @@ export default function OrderPopUp() {
             name: 'ASC'
         });
     }, []);
-
 
     return (
         <PopUp className="column justify-center">
