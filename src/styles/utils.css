@@ -49,6 +49,7 @@
 
 .font-size-12 {
     font-size: var(--font-size-12);
+    color: rgb(234, 113, 113);
 }
 
 .font-size-16 {

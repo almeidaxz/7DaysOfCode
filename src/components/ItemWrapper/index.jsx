@@ -15,7 +15,7 @@ export default function ItemWrapper({ name, preco, img }) {
                     <img src={Seta} alt="arrow icon" />
                 </BuyBtn>
             </ItemTextContentWrapper>
-            <ItemImageWrapper style={{ backgroundImage: `url('./src/assets/${img}.png')` }} />
+            <ItemImageWrapper style={{ backgroundImage: `url('../../assets/${img}.png')` }} />
         </ItemContentWrapper>
     )
 }

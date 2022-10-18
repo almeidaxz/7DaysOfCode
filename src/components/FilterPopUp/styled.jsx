@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PopUp = styled.div`
-    height: 95px;
+    height: 11rem;
     width: 80px;
     padding: 1rem;
     border-radius: 5px;
@@ -17,20 +17,46 @@ export const CustomInput = styled.input`
     font-size: 1rem;
     width: 40px;
     height: 18px;
+    padding: 0.3rem;
+    margin-bottom: 0.1rem;
     border: 1px solid gray;
-    &::placeholder {
-        padding: 0.2rem;
+    &:focus{
+        outline: none;
+        border: 1px solid var(--theme-color);
+    }
+    &::-webkit-outer-spin-button,
+    ::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &[type=number] {
+      -moz-appearance: textfield;
     }
 `;
 
-export const CustomBtn = styled.button`
+export const CustomApplyBtn = styled.button`
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     text-align: left;
     color: var(--theme-color);
+    background-color: #FFF;
+    margin-top: 0.6rem;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        color: var(--theme-color-hover);
+    }
+`;
+
+export const CustomResetBtn = styled.button`
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: rgb(169, 0, 0);
     border: none;
     background-color: #FFF;
     cursor: pointer;
     &:hover{
-        color: var(--theme-color-hover);
+        color: rgb(234, 113, 113);
     }
 `;

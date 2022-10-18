@@ -2,9 +2,9 @@ import { PopUp, OrderOption } from "./styled";
 import { ArrowUp, ArrowDown } from 'phosphor-react';
 import { useEffect, useState } from "react";
 
-export default function OrderPopUp({ items, setItems }) {
+export default function OrderPopUp({ localItems, setLocalItems, popUps, setPopUps }) {
     const [ordination, setOrdination] = useState({});
-    const localItems = [...items];
+    const itemsCopy = [...localItems];
 
     const handleChangeOrdination = (e) => {
         const selectedOption = e.target.innerHTML.split('<')[0];
@@ -27,17 +27,17 @@ export default function OrderPopUp({ items, setItems }) {
     const handleOrdination = (sortOrder, sortOption, itemKey) => {
         const sortedItems = handleSort(sortOrder, itemKey);
         setOrdination({ ...ordination, [sortOption]: sortOrder });
-        setItems(sortedItems);
+        setLocalItems(sortedItems);
     }
 
     const handleSort = (sortOrder, sortOption) => {
         switch (sortOrder) {
             case 'ASC':
-                return localItems.sort((a, b) => {
+                return itemsCopy.sort((a, b) => {
                     return a[sortOption] > b[sortOption] ? 1 : -1;
                 });
             case 'DSC':
-                return localItems.sort((a, b) => {
+                return itemsCopy.sort((a, b) => {
                     return a[sortOption] < b[sortOption] ? 1 : -1;
                 });
             default:

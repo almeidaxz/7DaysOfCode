@@ -9,7 +9,7 @@ import './styles.css';
 
 export default function Newsletter() {
     const formRef = useRef();
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit, reset,  formState: { errors } } = useForm({
         resolver: joiResolver(newsletterSchema)
     });
 
@@ -28,12 +28,12 @@ export default function Newsletter() {
                     onSubmit={handleSubmit((data) => {
                         alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail ${data.email}`);
                         sendMail(formRef.current);
+                        reset();
                     })}
                 >
                     <MailIcon src={Mail} className='mail-icon' alt="mail icon" />
                     <CustomInput
                         {...register("email", { required: true })}
-                        name='email'
                         className='font-size-16 border-none'
                         placeholder='Insira seu e-mail'
                     />
