@@ -1,6 +1,7 @@
 import Seta from '../../assets/seta.svg';
 import formatPrice from '../../utils/utils';
 import { BuyBtn, FadedText, ItemContentWrapper, ItemImageWrapper, ItemTextContentWrapper, ItemTitle } from './styled';
+import s from ''
 
 export default function ItemWrapper({ name, preco, img }) {
     return (
@@ -15,7 +16,7 @@ export default function ItemWrapper({ name, preco, img }) {
                     <img src={Seta} alt="arrow icon" />
                 </BuyBtn>
             </ItemTextContentWrapper>
-            <ItemImageWrapper style={{ backgroundImage: `url('../../assets/${img}.png')` }} />
+            <ItemImageWrapper style={{ backgroundImage: `url('../../../public/static/${img}.png')` }} />
         </ItemContentWrapper>
     )
 }
