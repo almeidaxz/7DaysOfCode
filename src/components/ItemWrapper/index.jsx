@@ -1,7 +1,6 @@
 import Seta from '../../assets/seta.svg';
 import formatPrice from '../../utils/utils';
 import { BuyBtn, FadedText, ItemContentWrapper, ItemImageWrapper, ItemTextContentWrapper, ItemTitle } from './styled';
-import s from ''
 
 export default function ItemWrapper({ name, preco, img }) {
     return (
